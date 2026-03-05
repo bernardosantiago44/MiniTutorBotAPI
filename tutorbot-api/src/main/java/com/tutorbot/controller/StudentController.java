@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @RestController
+@RequestMapping("/api/")
 @EnableAsync
 public class StudentController {
     private final StudentService studentService;

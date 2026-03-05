@@ -1,28 +1,27 @@
 package com.tutorbot.model;
 
-public class Exercise {
-    public long id;
-    public String topic;
-    public String question;
-    public String difficulty;
+public abstract class Exercise {
+    protected String topic;
+    protected String question;
+    protected String correctAnswer;
+    protected String difficulty;
 
-    public Exercise(long id,
-                    String topic,
+    public Exercise(String topic,
                     String question,
+                    String answer,
                     String difficulty) {
-        this.id = id;
         this.topic = topic;
         this.question = question;
+        this.correctAnswer = answer;
         this.difficulty = difficulty;
     }
-
-    public long getId() { return id; }
     public String getTopic() { return topic; }
     public String getQuestion() { return question; }
+    public String getCorrectAnswer() { return correctAnswer; }
     public String getDifficulty() { return difficulty; }
 
-    public void setId(long id) { this.id = id; }
     public void setTopic(String topic) { this.topic = topic; }
     public void setQuestion(String question) { this.question = question; }
+    public void setAnswer(String answer) { this.correctAnswer = answer; }
     public void setDifficulty(String difficulty) { this.difficulty = difficulty; }
 }
